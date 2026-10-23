@@ -1,15 +1,10 @@
-#import "lib/ui.typ": definition, property, comment, example
-#set text(font: "Lilex Nerd Font Mono")
-#set heading(numbering: "1.")
-#show link: underline
-#show link: set text(fill: blue)
-#set list(indent: 1cm)
+#import "lib/ui.typ": definition, property, comment, example, documentProperties
 
-#title([Chapitre 0 : La loi +])
+#show: documentProperties
 
-#outline(
-  title: [Table des matières]
-)
+#title([Chapitre 0 - La loi +])
+
+#outline()
 
 = Préambule
 

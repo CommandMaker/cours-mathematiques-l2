@@ -1,5 +1,6 @@
 #let defCounter = counter("def")
 #let propCounter = counter("prop")
+#let demoCountrer = counter("demo")
 
 
 #let roundBlock(body, color, prefix, kind, count) = figure(
@@ -30,4 +31,42 @@
 #let property(body) = roundBlock(body, olive, "Propriété", "property", "prop")
 #let comment(body) = roundBlock(body, purple, "Remarque", "comment", "")
 #let example(body) = roundBlock(body, gray, "Exemple", "example", "")
+#let demo(body) = roundBlock(body, blue, "Démonstration", "demonstration", "demo")
+
+
+#let documentProperties(doc) = [
+  #set text(font: "Lilex Nerd Font Mono")
+  #set heading(numbering: "1.")
+  #show link: underline
+  #show link: set text(fill: blue)
+  #set list(indent: 1cm)
+  #set outline(title: "Contenu")
+
+  /* Some shortcuts for things that are annoying to type everytime */
+  #show "ZnZA": $(ZZ"/"n ZZ, +, times)$
+  #show "ZnZP": $(ZZ"/"n ZZ, +)$
+  #show "ZnZT": $(ZZ"/"n ZZ, times)$
+  #show "ZnZS": $(ZZ"/"n ZZ)^*$
+
+  #show raw: it => {
+    set text(font: "Lilex Nerd Font Mono")
+
+    box(
+      it,
+      stroke: (paint: silver, thickness: .3mm),
+      inset: 3mm,
+      width: 100%
+    )
+  }
+
+  #show title: it => block(
+    it,
+    stroke: (bottom: (paint: gray, thickness: 2mm)),
+    inset: (bottom: 3mm),
+    width: 100%
+  )
+
+  #doc
+]
+
 
