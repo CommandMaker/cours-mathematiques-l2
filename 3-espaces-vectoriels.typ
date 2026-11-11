@@ -1,9 +1,9 @@
-#import "lib/ui.typ": *
+#import "lib/lib-ui.typ": *
 
 #show: documentProperties
 
-#title[
-  Chapitre 3 - Espaces vectoriels
+#docTitle(number: "03")[
+  Espaces vectoriels
 ]
 
 #outline()
@@ -31,7 +31,7 @@ Faire l'intro j'ai pas le temps maintenant
   $
 
   $(RR^2, +, .)$ est un $RR$-espace vectoriel. Montrons par exemple que la loi $.$ satisfait bien la première propriété qui la concerne :\
-  Soit $a,b in RR^2, thick lambda in R, quad a = (a_0, a_1), b = (b_0, b_1)$\
+  Soit $a,b in RR^2, thick lambda in RR, quad a = (a_0, a_1), b = (b_0, b_1)$\
   $
   lambda . (a + b) &= lambda . (a_0 + b_0, a_1 + b_1)\
   &= (lambda (a_0 + b_0), lambda (a_1 + b_1))\ \
@@ -86,7 +86,7 @@ Faire l'intro j'ai pas le temps maintenant
   Soit $(E, +, .)$ un $KK$-espace vectoriel, $forall lambda in KK, quad lambda . e_E = e_E$
 ]
 
-#demo[
+#proof[
   $
   &lambda . (e_E + e_E) = lambda . e_E\
   &<=> lambda . e_E + lambda . e_E = lambda . e_E\

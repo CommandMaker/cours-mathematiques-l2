@@ -1,8 +1,10 @@
-#import "lib/ui.typ": definition, property, comment, example, documentProperties
+#import "lib/lib-ui.typ": definition, property, comment, example, documentProperties, docTitle
 
 #show: documentProperties
 
-#title([Chapitre 0 - La loi +])
+#docTitle(number: "00")[
+  La loi $+$
+]
 
 #outline()
 
@@ -51,7 +53,7 @@ Pour représenter $ZZ$, on utilise la une droite graduée avec en son centre $0$
 
 #underline[*Règle de calcul de a + b*] : On place $a$ sur la droite. Si $b$ est nul ou positif, on avance de $b$ graduations vers la droite, sinon on recule de $b$ graduations.
 
-Cette nouvelle loi additive hérite des propriétés @prop1, @prop2 et @prop3 car $NN subset ZZ$ mais en définit une nouvelle :
+Cette nouvelle loi additive hérite des propriétés de la loi $+$ de $NN$ car $NN subset ZZ$ mais en définit une nouvelle :
 
 #property[
   Tout élément $a$ de $ZZ$ admet un symétrique, noté $"sym"_+(a)$ tel que $a + "sym"_+(a) = e$.
